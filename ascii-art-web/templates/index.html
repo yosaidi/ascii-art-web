@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii Generator</title>
+</head>
+<body>
+    <form action="/ascii-art" method="post" >
+        <label></label>
+        <textarea name="input" rows="3" maxlength="300" required placeholder="Enter your text here!"></textarea><br>
+        <input type="radio" name="banner"value="standard" checked required>
+        <label>
+            Standard
+        </label><br>
+        <input type="radio" name="banner"value="shadow" required>
+        <label for="flexRadioDefault2">
+            Shadow
+        </label><br>
+        <input type="radio" name="banner"value="thinkertoy" required>
+        <label for="flexRadioDefault3">
+            Thinkertoy
+        </label><br>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+{{if .Result}}
+    <div class="result-container">
+        <pre>{{.Result}}</pre>
+    </div>
+    {{end}}
+</body>
+</html>
